@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="flowers">Цветы</a>
+        <ul class="menu">
+            <li><a href="#pan" class="link">Метельчатая</a></li>
+            <li><a href="#creep" class="link">Ползучая</a></li>
+            <li><a href="#eleg" class="link">Изящная</a></li>
+            <li><a href="#wall" class="link">Стенная</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="font-size">Гипсофилы - это невероятно нежные и изящные цветы, напоминающие воздушные облака, которые завораживают своей утонченной и естественной красотой</h1>
+        
+        <a class="inline-link" href="https://jungle.by/blog/uhod-za-gipsofiloy-v-bukete-doma?srsltid=AfmBOoqb6oIJR2gAiAmb8kDa2ZxFSjoSW9zZqdGpScgqt9NCG4YnaTvy" target="_blank">
+            Больше о гипсофилах здесь
+        </a>
+
+        <div class="block" id="pan">
+            <img src="img/метельчатая.jpg" alt="Метельчатая гипсофила">
+            <div class="block-text anim-fade">
+                <p class="font-size">Метельчатая гипсофила</p>
+                <p class="text">Один из самых популярных и любимых сортов, который восхищает своими пышными, ветвистыми соцветиями. Ее мелкие белые или нежно-розовые цветочки образуют густое ажурное облако, способное украсить любой сад или букет. Это растение невероятно неприхотливо в уходе, а после высыхания превращается в прекрасный сухоцвет, который будет радовать вас своей утонченной красотой круглый год.</p>
+                <button onclick="this.innerHTML='В корзине'; this.classList.add('active')">В корзину</button>
+            </div>
+        </div>
+
+        <div class="block" id="creep">
+            <img src="img/ползучая.jpg" alt="Ползучая гипсофила">
+            <div class="block-text anim-fade">
+                <p class="font-size">Ползучая гипсофила</p>
+                <p class="text">Этот сорт отличается аккуратными, миниатюрными цветочками, которые создают неповторимый эффект пушистого и невесомого облака. Букет из такой гипсофилы невероятно стоек: он будет долго радовать свежестью в вазе, а со временем превратится в изящный сухоцвет, который сохранит свою форму и красоту на долгие месяцы.</p>
+                <button onclick="this.innerHTML='В корзине'; this.classList.add('active')">В корзину</button>
+            </div>
+        </div>
+
+        <div class="block" id="eleg">
+            <img src="img/изящная.jpg" alt="Изящная гипсофила">
+            <div class="block-text anim-fade">
+                <p class="font-size">Изящная гипсофила</p>
+                <p class="text">Истинная классика флористики, которая ценится за свои крупные, эффектные цветы. В отличие от других сортов, её веточки усыпаны более выразительными белыми, розовыми или даже пурпурными чашечками, напоминающими крошечные фарфоровые звездочки. Букет из изящной гипсофилы выглядит невероятно роскошно и самодостаточно, создавая ощущение пышного праздничного облака, которое будет стойко стоять в вазе и долго сохранять свой первозданный вид.</p>
+                <button onclick="this.innerHTML='В корзине'; this.classList.add('active')">В корзину</button>
+            </div>
+        </div>
+
+        <div class="block" id="wall">
+            <img src="img/стенная.jpg" alt="Стенная гипсофила">
+            <div class="block-text anim-fade">
+                <p class="font-size">Стенная гипсофила</p>
+                <p class="text">Удивительный сорт, который восхищает своей утонченной текстурой и невероятной стойкостью. Её веточки усыпаны множеством мелких, звездчатых цветочков глубокого розового или белоснежного оттенка, создающих эффект живого кружева. Букет из стенной гипсофилы смотрится очень нежно и современно, он идеально подходит для создания легких романтических композиций, которые будут долго сохранять свежесть и объем.</p>
+                <button onclick="this.innerHTML='В корзине'; this.classList.add('active')">В корзину</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anim-fade').forEach((block) => {
+            observer.observe(block);
+        });
+    </script>
+
+</body>
+</html>

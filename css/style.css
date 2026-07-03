@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../img/фон.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.nav {
+  padding: 0 20px;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(236, 235, 220);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.flowers {
+  color: rgb(207, 155, 211);
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.font-size {
+  display: block;
+  text-align: center;
+  font-family: "Marck Script", cursive;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 0 40px;
+}
+
+.inline-link {
+  display: block;
+  clear: both;
+  text-align: right;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding-right: 40px;
+}
+
+.link {
+  color: rgb(207, 155, 211);
+  font-size: 25px;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: rgb(238, 183, 240);
+}
+
+img {
+  float: left;
+  width: 350px;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 50px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+.container {
+  width: 100%;
+}
+
+.block {
+  clear: both;
+  margin-bottom: 70px;
+}
+
+.block-text {
+  margin-left: 430px;
+  overflow: hidden;
+  padding-right: 40px;
+}
+
+.text {
+  font-family: "Marck Script", cursive;
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 20px auto 50px auto;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(209, 180, 236);
+  color: #333333;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease; 
+}
+
+button:hover {
+  background-color: rgb(190, 155, 220); 
+}
+
+button:active {
+  transform: scale(0.95); 
+}
+
+button.active {
+  background-color: rgb(171, 118, 218);
+  color: #ffffff;
+}
+
+.anim-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .link {
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  img {
+    float: none;
+    margin: 20px auto;
+    display: block;
+    width: 90%;
+  }
+
+  .block-text {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .font-size {
+    font-size: 30px;
+  }
+  
+  .text {
+    font-size: 22px;
+  }
+}
